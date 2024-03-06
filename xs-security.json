@@ -1,0 +1,39 @@
+{
+  "xsappname": "ESMLSOCUSTACTIONSET",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Administrators",
+      "description": "Administrators"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Administrators",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Administrators"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "ESMLSOCUSTACTIONSET_Administrators",
+      "description": "ESM LSO Customer Action Administrators",
+      "role-template-references": [
+        "$XSAPPNAME.Administrators"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "credential-types": [
+      "binding-secret",
+      "instance-secret"
+    ],
+    "redirect-uris": [
+      "https://*.cfapps.eu10-004.hana.ondemand.com/**"
+    ]
+  }
+}
